@@ -14,7 +14,7 @@ const DESCRIPTIONS = [
   'Адреналин и скорость'
 ];
 
-export const photos = Array.from({ length: 25 }, (_, index) => ({
+export const generatePhotos = (count = 25) => Array.from({ length: count }, (_, index) => ({
   id: index + 1,
   url: `photos/${index + 1}.jpg`,
   description: DESCRIPTIONS[getRandomInteger(0, DESCRIPTIONS.length - 1)],
